@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Front-end kata
 
-## Available Scripts
+Kata is a Japanese word (型 or 形) meaning literally "form" referring to a detailed choreographed pattern of martial arts movements made to be practiced. Is also commonly used to when practicing repeating something, in this case, development.
 
-In the project directory, you can run:
+## Usage
 
-### `npm start`
+Project scaffolding using react-create-app (for some reason I was having an error when trying to execute webpack-dev-server so I switched) and is by default configured to run with the following command
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm start
+```
+It'll start a server in port 3000 and will launch a tab or window of your default browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Explanation
 
-### `npm test`
+### Login page
+Application will show a login screen, you can enter whatever values you want but make sure of the following
+* username is at least 8 chars long
+* password is at least 8 chars long, 1 capital letter, 1 special symbol `(!$@"%&/)`, max 20 chars
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Home page
+After submitting will load home page with some options in the nav bar where you will be able to visualize data (pie chart doesn't show relevant data, is just dummy)
 
-### `npm run build`
+### Transfer page
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This page has a form to submit new transactions, will show a pie chart with the current transactions grouped by destination account (this one works but doesn't show labels, didn't research further) and will load transactions from mock service and display them below, separated in tables by Origin account.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Disclaimer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Exercise is not complete, I used the opportunity mostly to refresh my knowledge on the library. It has a lot of opportunity areas but I still wanted to share it. I felt time wasn't enough to do what I wanted to do and I am nowhere happy with the result but I didn't want to take more time on this. 
 
-### `npm run eject`
+## 3rd party libraries
+* react-minimal-pie-chart - For the pie chart
+* miragejs - to mock api requests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
